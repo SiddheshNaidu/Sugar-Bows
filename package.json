@@ -1,0 +1,36 @@
+{
+  "name": "sugar-bows",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SiddheshNaidu/Sugar-Bows.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SiddheshNaidu/Sugar-Bows/issues"
+  },
+  "homepage": "https://github.com/SiddheshNaidu/Sugar-Bows#readme",
+  "dependencies": {
+    "@sentry/react": "^10.40.0",
+    "@supabase/supabase-js": "^2.98.0",
+    "@tanstack/react-query": "^5.90.21",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-hook-form": "^7.71.2",
+    "react-router-dom": "^7.13.1",
+    "zustand": "^5.0.11"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.4",
+    "vite": "^7.3.1"
+  }
+}

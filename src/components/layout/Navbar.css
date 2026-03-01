@@ -1,0 +1,186 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: var(--navbar-height);
+    background: rgba(250, 248, 245, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all var(--duration-normal) var(--ease-out);
+}
+
+.navbar--scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 1px 0 var(--color-light-gray);
+}
+
+.navbar__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Brand Logo Link */
+.navbar__brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+/* Desktop Nav Links */
+.navbar__nav {
+    display: flex;
+    gap: var(--space-8);
+}
+
+.navbar__link {
+    font-size: var(--text-sm);
+    font-weight: 500;
+    color: var(--color-medium-gray);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    position: relative;
+    padding: var(--space-2) 0;
+    transition: color var(--duration-fast) var(--ease-out);
+}
+
+.navbar__link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--color-primary);
+    transition: width var(--duration-normal) var(--ease-spring);
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+    color: var(--color-black);
+}
+
+.navbar__link--active::after,
+.navbar__link:hover::after {
+    width: 100%;
+}
+
+/* Actions (search, cart, account, hamburger) */
+.navbar__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.navbar__icon-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    color: var(--color-dark-gray);
+    text-decoration: none;
+    transition: all var(--duration-fast) var(--ease-out);
+    position: relative;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.navbar__icon-btn:hover {
+    background: var(--color-off-white);
+    color: var(--color-primary);
+}
+
+/* Cart Badge */
+.navbar__cart-badge {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary);
+    color: var(--color-white);
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn var(--duration-fast) var(--ease-spring);
+}
+
+/* Hamburger — hidden on desktop */
+.navbar__menu-toggle {
+    display: none;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-full);
+    color: var(--color-dark-gray);
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.navbar__menu-toggle:hover {
+    background: var(--color-off-white);
+}
+
+/* Mobile Menu — hidden by default */
+.navbar__mobile {
+    position: fixed;
+    top: var(--navbar-height);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-cream);
+    padding: var(--space-10) var(--space-6);
+    z-index: 99;
+    display: none;
+}
+
+.navbar__mobile--open {
+    display: block;
+    animation: fadeIn var(--duration-normal) var(--ease-out);
+}
+
+.navbar__mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.navbar__mobile-link {
+    display: block;
+    padding: var(--space-4) 0;
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    font-weight: 400;
+    color: var(--color-dark-gray);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-light-gray);
+    transition: color var(--duration-fast) var(--ease-out);
+}
+
+.navbar__mobile-link:hover {
+    color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar__nav {
+        display: none;
+    }
+
+    .navbar__menu-toggle {
+        display: flex;
+    }
+}

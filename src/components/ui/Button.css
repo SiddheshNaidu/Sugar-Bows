@@ -1,0 +1,14 @@
+.btn--loading {
+    position: relative;
+}
+
+.btn__spinner {
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn__icon {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.1em;
+}
