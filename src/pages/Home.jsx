@@ -7,6 +7,7 @@ import BrandLogo from '@/components/icons/BrandLogo'
 import { IconSparkles, IconTruck, IconHeart, IconCamera, IconBouquet, IconFrame, IconGift, IconStar, IconArrowRight } from '@/components/icons/Icons'
 import { useFeaturedProducts } from '@/hooks/useProducts'
 import { categories } from '@/constants/theme'
+import { HeroScrollDemo } from '@/components/demo/HeroScrollDemo'
 
 // Product images
 import heroBouquet from '@/assets/images/products/hero_bouquet.png'
@@ -144,6 +145,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ─── Scroll Animation Showcase ─── */}
+      <HeroScrollDemo />
 
       <Divider ornate />
 
