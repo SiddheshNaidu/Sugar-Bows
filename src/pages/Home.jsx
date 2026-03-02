@@ -8,15 +8,12 @@ import { IconSparkles, IconTruck, IconHeart, IconCamera, IconBouquet, IconFrame,
 import { useFeaturedProducts } from '@/hooks/useProducts'
 import { categories } from '@/constants/theme'
 import { HeroScrollDemo } from '@/components/demo/HeroScrollDemo'
+import { RoseHeroDemo } from '@/components/ui/rose-hero-demo'
 
 // Product images
 import heroBouquet from '@/assets/images/products/hero_bouquet.png'
-import redVelvetRoses from '@/assets/images/products/red_velvet_roses.png'
 import pinkRosesBouquet from '@/assets/images/products/pink_roses_bouquet.png'
 import customPhotoFrame from '@/assets/images/products/custom_photo_frame.png'
-import bluePurpleRoses from '@/assets/images/products/blue_purple_roses.png'
-import sunlightBouquet from '@/assets/images/products/sunlight_bouquet.png'
-import giftComboBox from '@/assets/images/products/gift_combo_box.png'
 import hairclipBouquet from '@/assets/images/products/hairclip_bouquet.png'
 
 import './Home.css'
@@ -31,12 +28,12 @@ const categoryIcons = {
 
 // Showcase gallery images
 const galleryImages = [
-  { src: redVelvetRoses, alt: 'Red Velvet Roses in Black Gift Box', label: 'Velvet Blooms' },
-  { src: bluePurpleRoses, alt: 'Blue & Purple Satin Rose Bouquet', label: 'Royal Satin' },
+  { src: pinkRosesBouquet, alt: 'Pink Roses in Black Gift Box', label: 'Pink Blooms' },
+  { src: heroBouquet, alt: 'Signature Rose Bouquet', label: 'Signature Roses' },
   { src: customPhotoFrame, alt: 'Clay Roses Photo Frame', label: 'Custom Frames' },
-  { src: sunlightBouquet, alt: 'Sunlight Bouquet', label: 'Sunny Charm' },
   { src: hairclipBouquet, alt: 'Hairclip Flower Bouquet', label: 'Hairclip Blooms' },
-  { src: giftComboBox, alt: 'Curated Gift Combo Box', label: 'Gift Combos' },
+  { src: pinkRosesBouquet, alt: 'Luxury Roses Collection', label: 'Luxury Collection' },
+  { src: customPhotoFrame, alt: 'Curated Gift Combo Box', label: 'Gift Combos' },
 ]
 
 export default function Home() {
@@ -45,41 +42,7 @@ export default function Home() {
   return (
     <PageWrapper>
       {/* ─── Hero ─── */}
-      <section className="hero">
-        <div className="hero__bg" />
-        <div className="container hero__inner">
-          <div className="hero__content">
-            <span className="text-overline">Handcrafted with love</span>
-            <h1 className="text-hero">
-              Gifts that say<br />
-              <span className="text-hero--italic">what words can't</span>
-            </h1>
-            <p className="hero__subtitle text-body--lg">
-              Eternal rose arrangements & custom birthday frames —
-              made by hand, delivered to their door. Starting from ₹120.
-            </p>
-            <div className="hero__actions">
-              <Link to="/shop">
-                <Button variant="primary" size="lg" icon={<IconArrowRight size={18} />}>Shop Now</Button>
-              </Link>
-              <Link to="/customise">
-                <Button variant="secondary" size="lg">Customise a Frame</Button>
-              </Link>
-            </div>
-          </div>
-          <div className="hero__visual">
-            <div className="hero__image-main">
-              <img src={heroBouquet} alt="Luxury handcrafted eternal rose bouquet by Sugar & Bows" />
-            </div>
-            <div className="hero__image-float hero__image-float--1">
-              <img src={pinkRosesBouquet} alt="Pink glitter roses bouquet" />
-            </div>
-            <div className="hero__image-float hero__image-float--2">
-              <img src={customPhotoFrame} alt="Custom clay roses photo frame" />
-            </div>
-          </div>
-        </div>
-      </section>
+      <RoseHeroDemo />
 
       {/* ─── Trust Bar ─── */}
       <section className="trust-bar">
@@ -214,7 +177,7 @@ export default function Home() {
             <h2 className="h2">@sugar_and_bows</h2>
           </div>
           <div className="instagram-grid">
-            {[redVelvetRoses, bluePurpleRoses, sunlightBouquet, hairclipBouquet].map((src, i) => (
+            {[pinkRosesBouquet, heroBouquet, customPhotoFrame, hairclipBouquet].map((src, i) => (
               <a
                 key={i}
                 href="https://www.instagram.com/sugar_and_bows"

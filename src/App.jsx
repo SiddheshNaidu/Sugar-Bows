@@ -18,6 +18,7 @@ import Occasions from '@/pages/Occasions'
 import Account from '@/pages/Account'
 import Login from '@/pages/Login'
 import NotFound from '@/pages/NotFound'
+import { SidebarDemo } from '@/components/demo/SidebarDemo'
 
 // Auth listener
 import { useAuth } from '@/hooks/useAuth'
@@ -57,6 +58,8 @@ export default function App() {
           <Route path="/order/:id" element={<ProtectedRoute><OrderTracking /></ProtectedRoute>} />
           <Route path="/occasions" element={<ProtectedRoute><Occasions /></ProtectedRoute>} />
           <Route path="/account" element={<ProtectedRoute><Account /></ProtectedRoute>} />
+
+          <Route path="/sidebar-test" element={<SidebarDemo />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>

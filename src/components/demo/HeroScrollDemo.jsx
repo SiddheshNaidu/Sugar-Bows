@@ -3,11 +3,9 @@ import React from "react";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 
 // Use existing product images as a collage inside the scroll card
-import redVelvetRoses from "@/assets/images/products/red_velvet_roses.png";
+import customPhotoFrame from "@/assets/images/products/custom_photo_frame.png";
 import pinkRosesBouquet from "@/assets/images/products/pink_roses_bouquet.png";
-import bluePurpleRoses from "@/assets/images/products/blue_purple_roses.png";
-import sunlightBouquet from "@/assets/images/products/sunlight_bouquet.png";
-import giftComboBox from "@/assets/images/products/gift_combo_box.png";
+import hairclipBouquet from "@/assets/images/products/hairclip_bouquet.png";
 import heroBouquet from "@/assets/images/products/hero_bouquet.png";
 
 export function HeroScrollDemo() {
@@ -45,8 +43,8 @@ export function HeroScrollDemo() {
           </div>
           <div className="overflow-hidden rounded-xl">
             <img
-              src={redVelvetRoses}
-              alt="Red Velvet Roses"
+              src={customPhotoFrame}
+              alt="Custom Photo Frame"
               className="w-full h-full object-cover"
               draggable={false}
             />
